@@ -27,46 +27,74 @@ class MainActivity2 : AppCompatActivity() {
 
         addition.setOnClickListener {
 
-            val input1 = number1.text.toString().toInt()
-            val input2 = number2.text.toString().toInt()
-            val total = input1 + input2
+            try {
+                val input1 = number1.text.toString().toInt()
+                val input2 = number2.text.toString().toInt()
 
-            val tot = total.toString()
+                val total = input1 + input2
 
-            answer.setText(tot)
+                val tot = total.toString()
+
+                answer.setText(tot)
+            } catch (e: NumberFormatException) {
+                // Handle the case where the input cannot be converted to an integer
+                Toast.makeText(this, "Invalid input. Please enter valid numbers", Toast.LENGTH_SHORT).show()
+            }
         }
 
         subtruction.setOnClickListener {
 
-            val input1 = number1.text.toString().toInt()
-            val input2 = number2.text.toString().toInt()
+            try {
+                val input1 = number1.text.toString().toInt()
+                val input2 = number2.text.toString().toInt()
 
-            val total = input1 - input2
+                val total = input1 - input2
 
-            val tot = total.toString()
-            answer.setText(tot)
+                val tot = total.toString()
+                answer.setText(tot)
+
+            }catch (e: NumberFormatException){
+                Toast.makeText(this,"Invalid input. Please enter valid numbers",Toast.LENGTH_SHORT).show()
+            }
+
         }
+
+
 
         multiply.setOnClickListener {
 
-            val input1 = number1.text.toString().toInt()
-            val input2 = number2.text.toString().toInt()
+            try {
 
-            val total = input1 * input2
+                val input1 = number1.text.toString().toInt()
+                val input2 = number2.text.toString().toInt()
 
-            val tot = total.toString()
-            answer.setText(tot)
+                val total = input1 * input2
+
+                val tot = total.toString()
+                answer.setText(tot)
+
+            }catch (e: NumberFormatException){
+                Toast.makeText(this,"Invalid input. Please enter valid numbers",Toast.LENGTH_SHORT).show()
+            }
         }
 
         division.setOnClickListener {
 
-            val input1 = number1.text.toString().toInt()
-            val input2 = number2.text.toString().toInt()
+            try {
 
-            val total = input1 / input2
+                val input1 = number1.text.toString().toInt()
+                val input2 = number2.text.toString().toInt()
 
-            val tot = total.toString()
-            answer.setText(tot)
+                val total = input1 / input2
+
+                val tot = total.toString()
+                answer.setText(tot)
+
+            }catch (e: NumberFormatException){
+                Toast.makeText(this,"Invalid input. Please enter valid numbers",Toast.LENGTH_SHORT).show()
+            }
+
+
         }
 
 
