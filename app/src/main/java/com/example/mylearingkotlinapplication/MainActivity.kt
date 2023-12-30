@@ -12,9 +12,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val button: Button = findViewById(R.id.button)
+        val calc: Button = findViewById(R.id.calculator)
 
         button.setOnClickListener {
             intent = Intent(this, MainActivity2::class.java)
+            startActivity(intent)
+        }
+
+        calc.setOnClickListener {
+            intent = Intent(this, MainActivity3::class.java)
             startActivity(intent)
         }
     }
